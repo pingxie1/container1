@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史沿革</title>
+    <style>
+        /* 全局样式 */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("picture/1.jpg");
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        /* 淡入动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* 导航栏样式 */
+        nav {
+            background-color: rgba(0, 0, 0, 0.6);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 18px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 88px;
+            font-size: 1.8em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* 主内容区样式 */
+        .section {
+            padding: 150px 50px;
+            text-align: center;
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section h1 {
+            font-size: 3.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            color: #ffd700;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .section p {
+            font-size: 1.3em;
+            line-height: 1.9;
+            max-width: 900px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        /* 图片区域样式 */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 1s ease;
+        }
+
+        .image-container.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .image-container img {
+            width: 66.67%;
+            /* 约为网页宽度的三分之二 */
+            height: auto;
+            object-fit: contain;
+        }
+
+        /* 子内容区样式 */
+        .sub-section {
+            padding: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            margin: 20px auto;
+            max-width: 900px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .sub-section:hover {
+            transform: scale(1.03);
+        }
+
+        .sub-section h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .sub-section p {
+            font-size: 1.3em;
+            line-height: 1.9;
+        }
+
+        /* 动画效果 */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <nav>
+        <a href="首页.html">首页</a>
+        <a href="#origin">起源</a>
+        <a href="#development">发展</a>
+        <a href="#prosperity">繁荣</a>
+        <a href="#inheritance">传承与创新</a>
+    </nav>
+
+    <div class="section">
+        <h1>萨吾尔登非遗传承</h1>
+        <p>萨吾尔登是蒙古族一种古老的民间舞蹈，承载着深厚的历史文化底蕴。</p>
+    </div>
+
+    <div class="image-container">
+        <img src="picture\部位.webp" alt="图片1">
+    </div>
+
+    <div class="section" id="origin">
+        <h1>起源</h1>
+        <p>萨吾尔登起源于古代蒙古族的生产生活，与畜牧业紧密相连，最初是人们在劳动之余的自娱自乐形式。</p>
+    </div>
+
+    <div class="image-container">
+        <img src="picture/3.jpg" alt="图片2">
+    </div>
+
+    <div class="section" id="development">
+        <h1>发展</h1>
+        <p>随着时间的推移，萨吾尔登在蒙古族的各个部落中广泛传播，舞蹈动作和形式不断丰富，融入了更多的文化元素。</p>
+    </div>
+
+    <div class="image-container">
+        <img src="picture\呼吸.jpg" alt="图片3">
+    </div>
+
+    <div class="section" id="prosperity">
+        <h1>繁荣</h1>
+        <p>在蒙古族的重大节日和庆典活动中，萨吾尔登成为必不可少的表演项目，展现出蒙古族的热情与活力，达到了繁荣阶段。</p>
+    </div>
+
+    <div class="image-container">
+        <img src="picture\步伐.jpg" alt="图片4">
+    </div>
+
+    <div class="section" id="inheritance">
+        <h1>传承与创新</h1>
+        <div class="sub-section">
+            <h2>传承方式</h2>
+            <p>通过老一辈艺人言传身教，将萨吾尔登的技艺和文化代代相传。</p>
+        </div>
+        <div class="sub-section">
+            <h2>学校教育</h2>
+            <p>许多学校将萨吾尔登纳入艺术教育课程，培养青少年对这一非遗文化的兴趣。</p>
+        </div>
+        <div class="sub-section">
+            <h2>现代创新</h2>
+            <p>结合现代音乐和舞蹈元素，对萨吾尔登进行创新改编，使其更符合当代审美。</p>
+        </div>
+        <div class="sub-section">
+            <h2>文化交流</h2>
+            <p>通过国内外文化交流活动，让更多人了解和认识萨吾尔登这一独特的蒙古族舞蹈。</p>
+        </div>
+        <div class="sub-section">
+            <h2>保护措施</h2>
+            <p>政府和社会各界积极采取措施，保护萨吾尔登的传承和发展，确保这一珍贵的非遗文化得以延续。</p>
+        </div>
+    </div>
+
+    <script>
+        const imageContainers = document.querySelectorAll('.image-container');
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        imageContainers.forEach(container => {
+            observer.observe(container);
+        });
+    </script>
+</body>
+
+</html>

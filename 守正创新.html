@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --primary-color: #007BFF;
+      --accent-color: #FFC107;
+      --sub-module-bg: #F8F9FA;
+      --text-dark: #495057;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("picture/3.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      opacity: 0;
+      animation: fadeIn 0.7s ease forwards;
+    }
+
+    /* 淡入动画 */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* 返回符号样式 */
+    .back-symbol {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      width: 50px;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      font-size: 36px;
+      text-align: center;
+      line-height: 50px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .container {
+      padding: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+      transform: translateY(20%);
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 16px;
+      }
+    }
+
+    h1.main-title {
+      font-size: 88px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 132px;
+    }
+
+    .card-module {
+      margin-bottom: 88px;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+      background-color: var(--primary-color);
+      color: white;
+      transition: all 0.3s ease;
+      opacity: 0.8;
+    }
+
+    .card-module.active {
+      opacity: 1;
+      box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+      border: 2px solid var(--primary-color);
+    }
+
+    .main-card {
+      padding: 28px 58px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .main-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .main-card img {
+      width: 50px;
+      height: 50px;
+      margin-right: 28px;
+      src: "picture/部位.webp";
+    }
+
+    .main-card h2 {
+      font-size: 58px;
+      font-weight: medium;
+      margin: 28;
+    }
+
+    .sub-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 58px;
+      background-color: rgb(70, 144, 123);
+      padding: 28px;
+      display: none;
+      animation: expand 0.3s ease;
+    }
+
+    .card-module.active .sub-grid {
+      display: grid;
+    }
+
+    @keyframes expand {
+      from {
+        height: 0;
+        opacity: 0;
+      }
+
+      to {
+        height: auto;
+        opacity: 1;
+      }
+    }
+
+    .sub-card {
+      padding: 16px;
+      border-radius: 4px;
+      background-color: rgb(110, 209, 226);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .sub-card h3 {
+      font-size: 28px;
+      font-weight: regular;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .sub-card.bar-chart {
+      display: inline-block;
+      height: 40px;
+      width: 100px;
+      position: relative;
+    }
+
+    .sub-card.bar {
+      position: absolute;
+      bottom: 0;
+      background-color: var(--accent-color);
+      border-radius: 2px 2px 0 0;
+      height: 100%;
+    }
+
+    /* 新增的文字容器样式 */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .overlay-content {
+      background-color: white;
+      color: black;
+      padding: 20px;
+      border-radius: 8px;
+      width: 33%;
+      text-align: center;
+      font-size: 24px;
+    }
+  </style>
+  <title>守正创新</title>
+</head>
+
+<body>
+  <!-- 返回符号链接 -->
+  <a href="首页.html" class="back-symbol">&lt;</a>
+
+  <div class="container">
+    <h1 class="main-title">守正创新</h1>
+
+    <!-- 主模块1 -->
+    <div class="card-module">
+      <div class="main-card" onclick="toggleModule(this)">
+        <img src="picture/服饰2.png" alt="发展概况">
+        <h2>发展概况</h2>
+      </div>
+      <div class="sub-grid">
+        <div class="sub-card"
+          onclick="showOverlay('主要传播载体：\n目前，萨吾尔登作为国家级非物质文化遗产，传播主体包括但不限于主流媒体（中央级媒体、省市级媒体等）、当体文化宣传部门（城市文化厅、旅游局等）、萨吾尔登传承人（萨吾尔登舞蹈演员、民族舞艺人、剧团等）、萨吾尔登爱好者（蒙古族群众、新疆群众、民族舞爱好者、艺术研究者等）。\n 总体来讲，萨吾尔登的宣传传播范围较为局限，受众较为集中，具有较强的地域性和有限性。\n点击任意处返回。')">
+          <h3>主要传播载体</h3>
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+        <div class="sub-card" onclick="showOverlay('政策概况：\n这是政策概况的详细内容。点击任意处返回。')">
+          <h3>政策概况</h3>
+          <div class="progress-ring">
+          </div>
+        </div>
+        <div class="sub-card" onclick="showOverlay('市场概况：\n这是市场概况的详细内容。点击任意处返回。')">
+          <h3>市场概况</h3>
+          <div class="bar-chart">
+            <div class="bar"></div>
+          </div>
+        </div>
+        <div class="sub-card" onclick="showOverlay('传播与宣传概况：\n这是传播与宣传概况的详细内容。点击任意处返回。')">
+          <h3>传播与宣传概况</h3>
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 主模块2 -->
+    <div class="card-module">
+      <div class="main-card" onclick="toggleModule(this)">
+        <img src="picture/服饰1.png" alt="发展困境">
+        <h2>发展困境</h2>
+      </div>
+      <div class="sub-grid">
+        <div class="sub-card" onclick="showOverlay('资金不足文化 传播力受阻：\n这是资金不足文化 传播力受阻的详细内容。点击任意处返回。')">
+          <h3>资金不足文化 传播力受阻</h3>
+        </div>
+        <div class="sub-card" onclick="showOverlay('多元文化冲击 市场了解度与接受度不高：\n这是多元文化冲击 市场了解度与接受度不高的详细内容。点击任意处返回。')">
+          <h3>多元文化冲击 市场了解度与接受度不高</h3>
+        </div>
+        <div class="sub-card" onclick="showOverlay('继承性较弱 后继无人：\n这是继承性较弱 后继无人的详细内容。点击任意处返回。')">
+          <h3>继承性较弱 后继无人</h3>
+        </div>
+        <div class="sub-card" onclick="showOverlay('其他问题：\n这是其他问题的详细内容。点击任意处返回。')">
+          <h3>其他问题</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 新增的文字容器 -->
+  <div class="overlay" id="overlay">
+    <div class="overlay-content" id="overlay-content">
+      子模块，单击任意处以继续
+    </div>
+  </div>
+
+  <script>
+    function toggleModule(card) {
+      const module = card.closest('.card-module');
+      const isActive = module.classList.contains('active');
+      document.querySelectorAll('.card-module').forEach(m => {
+        m.classList.remove('active');
+        const subGrid = m.querySelector('.sub-grid');
+        if (subGrid) {
+          subGrid.style.display = 'none';
+        }
+      });
+      if (!isActive) {
+        module.classList.add('active');
+        const subGrid = module.querySelector('.sub-grid');
+        if (subGrid) {
+          subGrid.style.display = 'grid';
+        }
+      }
+    }
+
+    function showOverlay(content) {
+      document.getElementById('overlay-content').innerHTML = content.replace(/\n/g, '<br>');
+      const overlay = document.getElementById('overlay');
+      overlay.style.display = 'flex';
+
+      // 点击任意处隐藏容器
+      overlay.addEventListener('click', function () {
+        overlay.style.display = 'none';
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蒙古舞的社会因子</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            /* 添加背景图片 */
+            background-image: url('picture/3.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        /* 淡入动画 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            /* 调整背景色透明度为 80% */
+            background-color: rgba(18, 38, 32, 0.28);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            /* 调整背景色透明度为 80% */
+            background-color: rgba(182, 141, 64, 0.8);
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            font-size: 28px;
+            display: inline-block;
+            margin: 0 48px;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 28px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(214, 173, 96, 0.8);
+        }
+
+        section {
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            /* 调整背景色透明度为 80% */
+            background-color: rgba(255, 255, 255, 0.28);
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #122620;
+            font-size: 36px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #b68d40;
+            padding-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .image-container {
+            width: calc(100% * 2 / 3);
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .image-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: skewX(-30deg);
+            animation: lightPass 2s ease forwards;
+        }
+
+        @keyframes lightPass {
+            to {
+                left: 100%;
+            }
+        }
+
+        footer {
+            /* 调整背景色透明度为 80% */
+            background-color: rgba(18, 38, 32, 0.28);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>蒙古舞的社会因子</h1>
+        <p>探索蒙古舞背后的社会文化</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="首页.html">首页</a></li>
+            <li><a href="#geography">地理环境与生产生活</a></li>
+            <li><a href="#spirit">精神与信仰</a></li>
+            <li><a href="#costume">服饰与穿戴</a></li>
+            <li><a href="#music">音乐与旋律</a></li>
+        </ul>
+    </nav>
+    <section id="geography">
+        <h2>地理环境与生产生活</h2>
+        <p>蒙古舞深深扎根于广袤的草原地理环境和独特的生产生活方式。蒙古民族长期逐水草而居，以游牧为生，这种生活使得他们与马建立了深厚的情感纽带。在蒙古舞中，大量动作模拟了马的姿态，如扬鞭、勒马等动作，生动展现了牧民在草原上策马奔腾的场景。同时，挤奶、剪羊毛等日常生产活动也被融入舞蹈动作，成为舞蹈独特的语言，反映出草原人民对生活的热爱和对劳动的赞美。
+        </p>
+        <div class="image-container">
+            <img src="picture\start-封面.jpg" alt="地理环境与生产生活相关图片">
+        </div>
+    </section>
+    <section id="spirit">
+        <h2>精神与信仰</h2>
+        <p>蒙古民族拥有丰富的精神世界和坚定的信仰，这些在蒙古舞中得到了充分体现。萨满教在蒙古族文化中占据重要地位，其对自然的敬畏、对神灵的尊崇通过舞蹈动作传递出来。例如，舞者在舞蹈中常常以向天祈福的姿势，展现对天地自然的敬畏之情。舞蹈中奔放而豪迈的风格，也彰显了蒙古族人民勇敢无畏、坚韧不拔的精神品质，他们在辽阔的草原上，面对各种困难，始终保持着积极向上的生活态度。
+        </p>
+        <div class="image-container">
+            <img src="picture\步伐.jpg" alt="精神与信仰相关图片">
+        </div>
+    </section>
+    <section id="costume">
+        <h2>服饰与穿戴</h2>
+        <p>蒙古舞的服饰极具特色，不仅美观大方，还与舞蹈动作相得益彰。传统的蒙古袍，色彩鲜艳，款式宽松，便于舞者大幅度动作。袍身的刺绣、镶边等工艺精致，展现了蒙古族精湛的手工技艺。此外，蒙古帽、靴子等穿戴也为舞蹈增添了独特魅力。舞者在舞动时，袍角飞扬，配饰叮当作响，与舞蹈动作相互辉映，营造出浓郁的民族风情，让观众更加直观地感受到蒙古族服饰文化的魅力。
+        </p>
+        <div class="image-container">
+            <img src="picture\部位.webp" alt="服饰与穿戴相关图片">
+        </div>
+    </section>
+    <section id="music">
+        <h2>音乐与旋律</h2>
+        <p>蒙古舞与蒙古族音乐紧密相连，独特的音乐旋律为舞蹈赋予了灵魂。蒙古族音乐以其悠扬的长调、激昂的短调而闻名。长调旋律舒缓、悠长，仿佛诉说着草原的广袤与宁静；短调则节奏明快、活泼，与舞蹈中快速的动作相呼应。马头琴作为蒙古族代表性乐器，其独特的音色为舞蹈营造出浓厚的氛围。在音乐的伴奏下，舞者的动作更加富有节奏感和表现力，两者完美结合，共同展现出蒙古文化的独特魅力。
+        </p>
+        <div class="image-container">
+            <img src="picture\图标.png" alt="音乐与旋律相关图片">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 蒙古舞社会因子介绍</p>
+    </footer>
+    <script>
+        // 这里代码保持不变，因为光影效果通过CSS实现，无需JavaScript额外控制
+        function checkVisibility() {
+            const imageContainers = document.querySelectorAll('.image-container');
+            imageContainers.forEach(container => {
+                const rect = container.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    container.style.animationPlayState = 'running';
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('load', checkVisibility);
+    </script>
+</body>
+
+</html>
